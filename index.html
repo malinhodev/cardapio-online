@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Devburguer</title> 
+    <script src="js/script.js" defer></script> 
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="center">
+            <img 
+                src="./assets/hamb-1.png" 
+                alt="logo devburguer"
+                class="perfil w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            >
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Devburguer</h1>
+            <span class="text-white font-medium">Rua F. Castro, 256, Fortaleza CE</span>
+            <div class="funcionamento  id="date-span">
+                <span class="text-white font-medium">Seg à Dom - 18:00 às 22:00</span>
+            </div>
+        </div>
+    </header>
+    <!--fim header-->
+
+    <h2 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">Conheça nosso Menu</h2>
+
+    <!--inicio menu-->
+    <div id="menu">
+        <main class="grid">
+            <!--produto item-->
+                <div class="product-item">
+                    <img 
+                        src="assets/hamb-1.png" 
+                        alt="hamburguer smash"
+                    />
+                    <div>
+                        <h4>Hambuguer Smash</h4>
+                        <p>É um tipo de hambúrguer um pouco menor e prensado diretamente na chapa que ganha um sabor especial justamente pela técnica utilizada.</p>
+                    
+                        <div class="price-add">
+                            <p class="font-bold text-lg">R$ 32.60</p>
+                            <button class="add-to-cart-btn" data-name="Hambuguer Smash" data-price="32.60">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                   </div>
+                </div>
+            <!--fim produto item-->
+
+            <!--produto item-->
+                <div class="product-item">
+                    <img 
+                        src="assets/hamb-2.png" 
+                        alt="hamburguer duplo"
+                    />
+                    <div>
+                        <h4>Hambuguer duplo</h4>
+                        <p>Dois hambúrgueres (carne 100% bovina), queijo processado sabor cheddar, cebola, fatias de bacon, ketchup, mostarda e pão com gergelim.</p>
+                    
+                        <div class="price-add">
+                            <p class="font-bold text-lg">R$ 32.60</p>
+                            <button class="add-to-cart-btn" data-name="Hambuguer duplo" data-price="32.60">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                </div>
+                </div>
+             <!--fim produto item-->
+            <!--produto item-->
+                <div class="product-item">
+                    <img 
+                        src="assets/hamb-3.png" 
+                        alt="hamburguer salad"
+                    />
+                    <div>
+                        <h4>Hambuguer salad</h4>
+                        <p>Com um suculento hambúrguer de 150g, alface crocante, tomate fresco e queijo cheddar derretido, cada mordida é uma explosão de sabores deliciosos. Tudo isso é servido em um pão brioche macio e levemente tostado, que completa perfeitamente essa combinação.</p>
+                    
+                        <div class="price-add">
+                            <p class="font-bold text-lg">R$ 21.80</p>
+                            <button class="add-to-cart-btn" data-name="Hambuguer salad" data-price="21.80">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                </div>
+                </div>
+            <!--fim produto item-->
+            <!--produto item-->
+                <div class="product-item">
+                    <img 
+                        src="assets/hamb-4.png" 
+                        alt="hamburguer da casa"
+                    />
+                    <div>
+                        <h4>Hambuguer da casa</h4>
+                        <p>Dois hambúrgueres (carne 100% bovina), queijo processado sabor cheddar, cebola, fatias de bacon, ketchup, mostarda e pão com gergelim.</p>
+                    
+                        <div class="price-add">
+                            <p class="font-bold text-lg">R$ 38.90</p>
+                            <button class="add-to-cart-btn" data-name="Hambuguer da casa" data-price="38.90">
+                                <i class="fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                </div>
+                </div>
+            <!--fim produto item-->
+
+        </main>
+
+        <h2>Bebidas</h2>
+        <div class="drinks grid">
+            <!--produto item-->
+            <div class="product-item">
+                <img 
+                    src="assets/refri-1.png" 
+                    alt="coca cola lata"
+                />
+                <div>
+                    <h4>Coca cola lata</h4>
+                    <p>350ml</p>
+                    <div class="price-add">
+                        <p class="font-bold text-lg">R$ 6</p>
+                        <button class="add-to-cart-btn" data-name="coca cola lata" data-price="6">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--fim produto item-->
+            <!--produto item-->
+            <div class="product-item">
+                <img 
+                    src="assets/refri-2.png" 
+                    alt="gurana lata"
+                />
+                <div>
+                    <h4>Coca cola lata</h4>
+                    <p>350ml</p>
+                    <div class="price-add">
+                        <p class="font-bold text-lg">R$ 6</p>
+                        <button class="add-to-cart-btn" data-name="coca cola lata" data-price="6">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <!--fim produto item-->
+        </div>
+    </div>
+    <!--fim menu-->
+    <!--modal-->
+    <div class="modal">
+        <div class="content-modal">
+            <h2>Carrinho <i class="fa fa-cart-plus"></i></h2>
+            <div id="cart-items" >
+
+            </div>
+            <p>Total: R$  <span id="cart-total">0.00</span></p>
+            <p>Endereço de entrega:</p>
+            <input type="text"  id="address" placeholder="digite seu endereço completo...">
+            <p id="address-warn">digite seu enderço completo!</p>
+            <div class="btns">
+                <button id="close-modal">Fechar</button>
+                <button id="checkout-btn">Finalizar pedido</button>
+            </div>
+        </div>
+    </div>    
+    <!--fim-modal-->
+    <footer>   
+        <button>
+            (<span>0</span>)
+            ver meu carrinho
+            <i class="fa fa-cart-plus"></i>
+        </button> 
+    </footer>
+</body>
+</html>
