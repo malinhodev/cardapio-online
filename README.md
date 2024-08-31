@@ -46,18 +46,10 @@ Bem-vindo ao repositório do **Cardápio online**, um projeto simples de um card
 4. **Execute o projeto**:
    - Abra o arquivo `index.html` no navegador para visualizar o cardápio.
 
-## 🔗 Integração com a API do WhatsApp
-
-Para configurar a integração com o WhatsApp, edite o arquivo `app.js` para incluir o número de telefone e o texto do pedido. A URL do WhatsApp será gerada automaticamente.
-
-Exemplo:
-```javascript
-const whatsappNumber = "seu-numero";
-const message = "Olá, gostaria de pedir o seguinte item: ";
 
 ## 🎨 Personalização
 
-Você pode personalizar o cardápio ajustando o CSS (`styles.css`) e adicionando novos itens ao HTML (`index.html`). As notificações do Toastify também podem ser personalizadas.
+Você pode personalizar o cardápio ajustando o CSS (`styles.css`) e adicionando novos itens ao HTML (`index.html`). As notificações do Toastify também podem ser personalizadas no arquivo `app.js`.
 
 ## 🔄 Contribuição
 
@@ -66,3 +58,19 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar p
 ## 📝 Licença
 
 Este projeto é licenciado sob a [MIT License](LICENSE).
+
+## 🔗 Integração com a API do WhatsApp
+
+Para configurar a integração com o WhatsApp, edite o arquivo `script.js` para incluir o número de telefone e o texto do pedido. A URL do WhatsApp será gerada automaticamente.
+Exemplo:
+```javascript
+const whatsappNumber = "seu-numero";
+const message = "Olá, gostaria de pedir o seguinte item: ";
+
+
+
+
+
+
+
+
