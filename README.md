@@ -11,9 +11,8 @@ Bem-vindo ao repositório do **Cardápio online**, um projeto simples de um card
 
 - `index.html`: Página principal do cardápio online.
 - `styles.css`: Arquivo CSS com o estilo do cardápio.
-- `app.js`: Arquivo JavaScript para a lógica do projeto, incluindo a integração com o WhatsApp e Toastify.
-- `images/`: Pasta que contém as imagens dos pratos.
-- `assets/`: Pasta para outros recursos, como ícones.
+- `script.js`: Arquivo JavaScript para a lógica do projeto, incluindo a integração com o WhatsApp e Toastify.
+- `assets/`: Pasta que contém as imagens dos pratos.
 
 ## 🛠️ Tecnologias Utilizadas
 
