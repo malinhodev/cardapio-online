@@ -17,6 +17,13 @@
     display: none;
 }
 
+.red{
+    background-color: var(--bg-color-red);
+}
+
+.green{
+    background-color: var(--funcionamento-color);
+}
 .flex{
     display: flex;
     
@@ -52,14 +59,11 @@ header img:hover{
     transform: scale(1.05);
 }
 
-header .funcionamento{
-    background-color: var(--funcionamento-color);
+.funcionamento{
+    /*background-color: var(--funcionamento-color);*/
     padding: 5px 12px;
     border-radius: 5px;
     margin-top: 10px;
-}
-header .funcionamento span{
-    color: var(--text-color-white);
 }
 
 h2{

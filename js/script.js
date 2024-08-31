@@ -79,6 +79,7 @@ function updateCartModal(){
     cartTotal.textContent = total.toFixed(2);
     cartCounter.innerHTML = cart.length;
 }
+//---------------------------------------------
 
 //remover item do carrinho
 cartItems.addEventListener("click", function(e){
@@ -101,4 +102,47 @@ function removeItemCart(name){
         cart.splice(index, 1)
         updateCartModal()
     }
+}
+//--------------------------------
+
+//pegando enderço
+inputAddress.addEventListener("input", function(e){
+    let inputValue = e.target.value;
+    if(inputValue !== ""){
+        addressWarn.style.display = "none";
+        inputAddress.style.border = "none";
+    }
+})
+
+//verificando endereço vazio e enviando o pedido
+checkoutBtn.addEventListener("click",()=>{
+    const isOpening = checkIsOpening();
+    if(!isOpening){
+        alert("Restaurante fechado!");
+        return;
+    }
+    if(cart.length === 0) return;
+    if(inputAddress.value === ""){        
+        addressWarn.style.display = "block";
+        inputAddress.style.border = "1px solid red";
+        return;
+    }
+})
+
+//verificando se está em horário de funcionamento
+function checkIsOpening(){
+    const data = new Date();
+    const hora = data.getHours();
+    return hora >= 18 && hora < 23;
+}
+
+const dateSpan = document.getElementById("date-span")
+const isOpen = checkIsOpening();
+
+if(isOpen){
+    dateSpan.classList.remove("red");
+    dateSpan.classList.add("green");
+}else{
+    dateSpan.classList.remove("green");
+    dateSpan.classList.add("red");
 }
