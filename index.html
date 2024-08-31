@@ -141,11 +141,11 @@
                     alt="gurana lata"
                 />
                 <div>
-                    <h4>Coca cola lata</h4>
+                    <h4>Guaraná lata</h4>
                     <p>350ml</p>
                     <div class="price-add">
                         <p class="font-bold text-lg">R$ 6</p>
-                        <button class="add-to-cart-btn" data-name="coca cola lata" data-price="6">
+                        <button class="add-to-cart-btn" data-name="guaraná lata" data-price="6">
                             <i class="fa fa-cart-plus"></i>
                         </button>
                     </div>
@@ -156,7 +156,7 @@
     </div>
     <!--fim menu-->
     <!--modal-->
-    <div class="modal">
+    <div class="modal" id="window-modal">
         <div class="content-modal">
             <h2>Carrinho <i class="fa fa-cart-plus"></i></h2>
             <div id="cart-items" >
@@ -174,8 +174,8 @@
     </div>    
     <!--fim-modal-->
     <footer>   
-        <button>
-            (<span>0</span>)
+        <button id="cart-btn">
+            ( <span id="cart-count">0</span> )
             ver meu carrinho
             <i class="fa fa-cart-plus"></i>
         </button> 
