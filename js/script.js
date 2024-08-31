@@ -51,11 +51,11 @@ function addToCart(name,price){
    
     updateCartModal()
 }
-
+var total = 0
 //atualizar carrinho
 function updateCartModal(){
     cartItems.innerHTML = "";
-    let total = 0
+    total = 0;
     cart.forEach(item => {
         const cartItemElement = document.createElement("div")
         cartItemElement.innerHTML = `
@@ -118,7 +118,17 @@ inputAddress.addEventListener("input", function(e){
 checkoutBtn.addEventListener("click",()=>{
     const isOpening = checkIsOpening();
     if(!isOpening){
-        alert("Restaurante fechado!");
+        Toastify({
+            text: "Restaurante fechado!, retorne no horario de funcionamento.",
+            duration: 3000,           
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(275deg, #ffc31a 0, #ffb42b 8.33%, #ffa338 16.67%, #ff9143 25%, #ff7d4b 33.33%, #ff6851 41.67%, #f25353 50%, #d94053 58.33%, #c23054 66.67%, #ae2455 75%, #9d1c56 83.33%, #8e1859 91.67%, #81195d 100%)",
+            },
+        }).showToast();
         return;
     }
     if(cart.length === 0) return;
@@ -127,6 +137,20 @@ checkoutBtn.addEventListener("click",()=>{
         inputAddress.style.border = "1px solid red";
         return;
     }
+
+    //enviando o pedido
+    const cartItems = cart.map((item)=>{
+        return (
+             ` (${item.quantity}) ${item.name} preço: R$${item.price} |`
+        )
+              
+    }).join("")
+    const message = encodeURIComponent(cartItems)
+    const phone = "85997287176"
+    window.open(`https://wa.me/${phone}?text=${message} total do pedido: R$ ${total} Endereço: ${inputAddress.value} `, "_blank")
+    cart = [];
+    total = 0;
+    updateCartModal();
 })
 
 //verificando se está em horário de funcionamento
