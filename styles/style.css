@@ -166,9 +166,15 @@ footer{
     background-color: var(--bory-color);
     border-radius: 1rem;
     min-width: 85%;
+    max-height: 85%;
+    overflow-y: auto;
 }
-
+.content-modal::-webkit-scrollbar {
+    display: none;
+}
 .cart-items{
+    width: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
