@@ -141,7 +141,7 @@ checkoutBtn.addEventListener("click",()=>{
     //enviando o pedido
     const cartItems = cart.map((item)=>{
         return (
-             ` (${item.quantity}) ${item.name} preço: R$${item.price} |`
+             `(${item.quantity}) ${item.name} preço: R$${item.price} |--|`
         )
               
     }).join("")
@@ -157,7 +157,7 @@ checkoutBtn.addEventListener("click",()=>{
 function checkIsOpening(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 23;
+    return hora >= 17 && hora < 23;
 }
 
 const dateSpan = document.getElementById("date-span")
